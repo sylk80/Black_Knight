@@ -1,0 +1,60 @@
+{
+    "name": "template",
+    "version": "1.0.0",
+    "description": "",
+    "main": "template.js",
+    "scripts": {
+      "lint": "eslint \"./**/*.js\"",
+      "start": "npx run-func src/template.js template_method",
+      "test": "npm run test:unit && npm run test:bdd",
+      "test:unit": "jest ./__tests__ --verbose",
+      "test:unit:watch": "npm run test:unit -- --watchAll",
+      "test:bdd": "jest ./bdd/features --verbose",
+      "test:bdd:watch": "npm run test:bdd -- --watchAll",
+      "coverage": "jest --coverage",
+      "pre-commit": "lint-staged",
+      "prepare": "husky install"	
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "@commitlint/cli": "^16.2.1",
+      "@commitlint/config-conventional": "^16.2.1",
+      "@commitlint/travis-cli": "^16.2.1",
+      "@types/eslint-plugin-prettier": "^3.1.0",
+      "@types/eslint": "^7.29.0",
+      "@types/lodash": "^4.14.179",
+      "@types/prettier": "2.3.2",
+      "eslint": "^7.29.0",
+      "eslint-config-google": "^0.14.0",
+      "eslint-config-prettier": "^8.3.0",
+      "eslint-plugin-prettier": "^3.4.0",
+      "jest-cucumber-fusion": "^0.8.1",
+      "jest-sonar-reporter": "^2.0.0",
+      "jest": "^26.6.3",
+      "snyk": "^1.863.0",
+      "lint-staged": "^12.3.4",
+      "lodash": "^4.17.21",
+      "prettier": "2.3.2"
+    },
+    "dependencies": {
+        "husky": "^6.0.0"
+    },
+    "jest": {
+      "testEnvironment": "node",
+      "collectCoverage": true,
+      "testMatch": [
+          "**/__tests__/**/?(*.)+(spec|test).[jt]s?(x)",
+          "**/?(*.)+(spec|test).[jt]s?(x)",
+          "**/*.steps.js"
+      ],
+      "testResultsProcessor": "jest-sonar-reporter",
+      "coveragePathIgnorePatterns": [
+        "/node_modules/",
+        "/bdd/",
+        "/__tests__/",
+        "/coverage/"
+      ]
+    }
+  }
