@@ -1,7 +1,9 @@
-const  isBlackKingInChess  = require('../src/chess.js');
+const { Board }  = require('../src/chess.js');
 
-describe('Given the black king', () => {
-    test('When checking for chess', () => {
-      expect(isBlackKingInChess()).toEqual('Hello world');
+describe('Placing pieces', () => {
+    test('Black king to H8', () => {
+        const board = new Board();
+        board.put('H8', 'BK');
+        expect(board.squares[7][7]).toBe('BK');
     });
   });

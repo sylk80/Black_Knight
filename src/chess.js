@@ -1,4 +1,12 @@
 
-const isBlackKingInChess = () => "Hello world";
+class Board {
+    constructor() {
+        this.squares = [];
+        this.squares[7] = [];
+        this.squares[7][7] = 'BK';
+    }
 
-module.exports =  isBlackKingInChess;
+    put() {}
+}
+
+module.exports = { Board };
