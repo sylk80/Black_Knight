@@ -6,4 +6,10 @@ describe('Placing pieces', () => {
         board.put('H8', 'BK');
         expect(board.squares[7][7]).toBe('BK');
     });
+
+    test('Black king to A1', () => {
+        const board = new Board();
+        board.put('A1', 'BK');
+        expect(board.squares[0][0]).toBe('BK');
+    });
   });
