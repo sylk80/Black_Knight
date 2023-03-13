@@ -81,7 +81,7 @@ The input will always be valid, no need to validate it. To help you visualize th
 Given a chess board
 And the black king on square H8
 When showing the board
-Then the black king is in the lower left corner
+Then the black king is in the lower left corner from the black's perspective
 ```
 
 ### Scenario 2: Board coordinates - A1
@@ -90,7 +90,7 @@ Then the black king is in the lower left corner
 Given a chess board
 And the black king on square A1
 When showing the board
-Then the black king is in the top right corner
+Then the black king is in the top right corner from the black's perspective
 ```
 
 ### Scenario 3: Board coordinates - H8 and H7
@@ -100,8 +100,8 @@ Given a chess board
 And a white pawn is on square H7
 And the black king on square H8
 When showing the board
-Then the black king is in the top right corner
-And a white pawn is below the top right corner
+Then the black king is in the lower left corner from the black's perspective
+And a white pawn is in the above the lower left corner from the black's perspective
 ```
 
 ### User acceptance test 1
@@ -149,5 +149,11 @@ And a white pawn is below the top right corner
 
 #### Pomodoro 8
 
-- :dart: Creating BDD test for the first scenario 
+- :heavy_check_mark: Creating BDD test for the first scenario
+- :heavy_check_mark: Creating BDD test for the second scenario
+
+#### Pomodoro 9
+
+- :heavy_check_mark: Refactoring implementation
+- :dart: Creating BDD test for the third scenario
 
