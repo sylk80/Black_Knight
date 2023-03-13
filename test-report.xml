@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/home/sylk/20230308_black_knight/bdd/features/templatefeature.steps.js">
-    <testCase name="Is this a template for jumpstart? I hace created a jumpstart" duration="2"/>
+  <file path="/home/sylk/20230308_black_knight/bdd/features/coordinatefeature.steps.js">
+    <testCase name="Board coordinates Coordinate H8 on the lower left corner" duration="2">
+      <failure message="TypeError: Board is not a constructor"><![CDATA[TypeError: Board is not a constructor
+    at Object.stepFunction (/home/sylk/20230308_black_knight/bdd/features/coordinatefeature.steps.js:15:13)
+    at /home/sylk/20230308_black_knight/node_modules/jest-cucumber/src/feature-definition-creation.ts:134:65
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)]]></failure>
+    </testCase>
   </file>
 </testExecutions>

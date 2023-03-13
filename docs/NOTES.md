@@ -14,14 +14,95 @@
 
 ### Description
 
+You have to write a function that takes for input a 8x8 chessboard in the form of a bi-dimensional array of chars (or strings of length 1, depending on the language) and returns a boolean indicating whether the king is in check.
 
-### Scenario 1
+The array will include 64 squares which can contain the following characters :
 
-:radio_button: As a
+'K' for the black King;
+'Q' for a white Queen;
+'B' for a white Bishop;
+'N' for a white kNight;
+'R' for a white Rook;
+'P' for a white Pawn;
+' ' (a space) if there is no piece on that square.
+There will always be exactly one king, which is the black king, whereas all the other pieces are white.
+The board is oriented from Black's perspective.
+Remember that pawns can only move and take forward.
+Also be careful with the pieces' lines of sight ;-) .
 
-:arrow_right: I want
+The input will always be valid, no need to validate it. To help you visualize the position, tests will print a chessboard to show you the problematic cases. Looking like this :
 
-:arrow_left:  So that
+```
+|---|---|---|---|---|---|---|---|
+|   |   |   |   |   |   |   |   |
+|---|---|---|---|---|---|---|---|
+|   |   |   | ♜ |   |   |   |   |
+|---|---|---|---|---|---|---|---|
+|   |   |   |   |   |   |   |   |
+|---|---|---|---|---|---|---|---|
+|   |   |   | ♔ |   |   |   |   |
+|---|---|---|---|---|---|---|---|
+|   |   |   |   |   |   |   |   |
+|---|---|---|---|---|---|---|---|
+|   |   |   |   |   |   |   |   |
+|---|---|---|---|---|---|---|---|
+|   |   |   |   |   |   |   |   |
+|---|---|---|---|---|---|---|---|
+|   |   |   |   |   |   |   |   |
+|---|---|---|---|---|---|---|---|
+```
+
+### Domain
+
+- Board
+  - Square
+    - (Coordinate)
+      - Row: 1-8
+      - Column: A-H
+    - 0 or 1 piece on a square
+- Movement
+  - Block
+  - Direction
+- Piece
+  - King
+  - Queen
+  - Bishop
+  - Knight
+  - Rook
+  - Pawn
+- Color
+    - White
+    - Black
+- Check
+
+### Scenario 1: Board coordinates - H8
+
+```
+Given a chess board
+And the black king on square H8
+When showing the board
+Then the black king is in the lower left corner
+```
+
+### Scenario 2: Board coordinates - A1
+
+```
+Given a chess board
+And the black king on square A1
+When showing the board
+Then the black king is in the top right corner
+```
+
+### Scenario 3: Board coordinates - H8 and H7
+
+```
+Given a chess board
+And a white pawn is on square H7
+And the black king on square H8
+When showing the board
+Then the black king is in the top right corner
+And a white pawn is below the top right corner
+```
 
 ### User acceptance test 1
 
@@ -32,3 +113,41 @@
 :heavy_exclamation_mark: Then
 
 ### Unit tests
+
+### Pomodori
+
+#### Pomodoro 1
+
+- :heavy_check_mark: Set up repo
+
+#### Pomodoro 2
+
+- :heavy_check_mark: customize project to current
+- :dart: First scenario - one white bishop and the black king present 
+
+#### Pomodoro 3
+
+- :heavy_check_mark: Define the domain
+
+#### Pomodoro 4
+
+- :heavy_check_mark: Refine domain
+
+#### Pomodoro 5
+
+- :heavy_check_mark: define first scenario
+- :heavy_check_mark: define second scenario
+
+#### Pomodoro 6
+
+- :heavy_check_mark: discover scenarios
+
+#### Pomodoro 7
+
+- :heavy_check_mark: discover scenarios
+
+
+#### Pomodoro 8
+
+- :dart: Creating BDD test for the first scenario 
+
