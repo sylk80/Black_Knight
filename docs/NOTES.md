@@ -75,6 +75,8 @@ The input will always be valid, no need to validate it. To help you visualize th
     - Black
 - Check
 
+## US1: Placing pieces
+
 ### Scenario 1: Board coordinates - H8
 
 ```
@@ -102,6 +104,38 @@ And the black king on square H8
 When showing the board
 Then the black king is in the lower left corner from the black's perspective
 And a white pawn is in the above the lower left corner from the black's perspective
+```
+
+## US2: Is the black king in check with a single piece
+
+### Scenario 1: Pawn on H7 before king on H8 is not in check
+
+```
+Given a chess board
+And a white pawn is on square H7
+And the black king on square H8
+When checking whether the black king is in check
+Then the black king is not in check
+```
+
+### Scenario 2: King on H8 with a pawn on G7 diagonally is in check
+
+```
+Given a chess board
+And a white pawn is on square G7
+And the black king on square H8
+When checking whether the black king is in check
+Then the black king is in check
+```
+
+### Scenario 3: Pawn on G7 before king on G8 is not in check
+
+```
+Given a chess board
+And a white pawn is on square G7
+And the black king on square G8
+When checking whether the black king is in check
+Then the black king is not in check
 ```
 
 ### User acceptance test 1
@@ -155,5 +189,15 @@ And a white pawn is in the above the lower left corner from the black's perspect
 #### Pomodoro 9
 
 - :heavy_check_mark: Refactoring implementation
-- :dart: Creating BDD test for the third scenario
+- :heavy_check_mark: Creating BDD test for the third scenario
 
+#### Pomodoro 10
+
+- :heavy_check_mark: Creating unit tests for third BDD test
+- :heavy_check_mark: Refactor code
+- :heavy_check_mark: Create user stories
+- :construction: Creating BDD test for the second user story
+
+#### Pomodoro 11
+
+- :construction: Creating BDD test for the second user story

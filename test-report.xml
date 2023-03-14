@@ -3,15 +3,11 @@
   <file path="/home/sylk/20230308_black_knight/bdd/features/coordinatefeature.steps.js">
     <testCase name="Board coordinates Coordinate H8 is on the lower left corner from the black&apos;s perspective" duration="2"/>
     <testCase name="Board coordinates Coordinate A1 is on the top right corner from the black&apos;s perspective" duration="0"/>
-    <testCase name="Board coordinates Coordinate H8 and H7 is on the lower left corner from the black&apos;s perspective" duration="4">
-      <failure message="Error: expect(received).toBe(expected) // Object.is equality"><![CDATA[Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: "BK"
-Received: "WP"
-    at Object.stepFn (/home/sylk/20230308_black_knight/bdd/features/coordinatefeature.steps.js:40:64)
-    at Object.stepFn [as stepFunction] (/home/sylk/20230308_black_knight/node_modules/jest-cucumber-fusion/src/index.js:248:44)
-    at /home/sylk/20230308_black_knight/node_modules/jest-cucumber/src/feature-definition-creation.ts:134:65
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)]]></failure>
-    </testCase>
+    <testCase name="Board coordinates Coordinate H8 and H7 is on the lower left corner from the black&apos;s perspective" duration="1"/>
+  </file>
+  <file path="/home/sylk/20230308_black_knight/bdd/features/kingincheckfeature.steps.js">
+    <testCase name="Determining whether a king is in check Pawn before king in same H column is not check" duration="2"/>
+    <testCase name="Determining whether a king is in check Pawn diagonally before king in adjacent column is in check" duration="0"/>
+    <testCase name="Determining whether a king is in check Pawn before king in same G column is not in check" duration="1"/>
   </file>
 </testExecutions>

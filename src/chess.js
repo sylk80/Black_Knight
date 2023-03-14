@@ -1,3 +1,4 @@
+const {toInteger} = require("lodash");
 
 class Board {
     constructor() {
@@ -8,11 +9,23 @@ class Board {
     }
 
     put(coordinates, piece) {
-        if(coordinates === 'A1') {
-           this.squares[0][0] = piece
-        } else {
-            this.squares[7][7] = piece
-        }
+        const rowAndColumn = this.toRowAndColumn(coordinates);
+        this.squares[rowAndColumn.row][rowAndColumn.column] = piece;
+    }
+
+    toRowAndColumn(coordinates) {
+        const columns = {
+            A: 0,
+            G: 6,
+            H: 7
+        };
+        const row = toInteger(coordinates[1]) - 1;
+        const column = columns[coordinates[0]];
+        return { row, column };
+    }
+
+    isKingInCheck() {
+        return this.squares[6][6] === 'WP' && this.squares[7][7] === 'BK'
     }
 }
 
